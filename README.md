@@ -1,37 +1,36 @@
-SUBTITLER
+# SUBTITLER
 
-Version: 0.5.0  | Date: 17.11.2026
+[🇷🇺 Русская версия](README.ru.md)
 
-Subtitler — облачный сервис автоматической транскрибации аудио и видео в субтитры (SRT/VTT/TXT). Создание субтитров происходит непочредственно в окне программы Adobe After Effects. Скрипт автоматически создаёт текстовые слои и маркеры на таймлайне.
+**Version:** 0.5.0 | **Date:** 17.11.2026
 
-Сервис поддерживает транскрибацию на 90+ языках, перевод субтитров через Argos Translate.
+Subtitler is a cloud service for automatic transcription of audio and video into subtitles (SRT/VTT/TXT). Subtitles are created directly inside the Adobe After Effects workspace. The script automatically creates text layers and markers on the timeline.
 
-Доступны два варианта использования: облачный по API или локальный. Сервис не взимает плату и не имеет обязательных платежей.
+The service supports transcription in 90+ languages and subtitle translation via Argos Translate.
 
-#Быстрый старт
+Two deployment options are available: cloud-based (via API) or local. The service is free of charge and has no mandatory payments.
 
-Облачный режим:
+## 🚀 Quick Start
 
-1. Зарегистрироваться на subtitler.qzz.io
-2. Скачать скрипт Subtitler.jsx. Скопировать скрипт в AE (Adobe After Effects 20xx\Support Files\Scripts\ScriptUI Panels)
-3. В настройках плагина указать API ключ из личного кабинета
-4. В AE выбрать нужный файл → запустить транскрибацию
+### Cloud Mode
+1. Register at [subtitler.qzz.io](https://subtitler.qzz.io)
+2. Download the `Subtitler.jsx` script. Copy the script into AE (`Adobe After Effects 20xx\Support Files\Scripts\ScriptUI Panels`).
+3. In the plugin settings, enter the API key from your account dashboard.
+4. In AE, select the desired file → start transcription.
 
-Локальный режим:
+### Local Mode
+1. Download the `Worker_local_v2` files.
+2. Run `Subtitler_Local.bat` (Windows) or `subtitler_local.sh` (macOS/Linux).
+3. Follow the installation wizard (automatic installation of PyTorch, WhisperX, and models).
+4. In the plugin settings, under the API field, specify: `Server URL = http://localhost:8765`.
+5. In AE, select the desired file → start transcription.
 
-1. Скачать файлы Worker_local_v2
-2. Запустить Subtitler_Local.bat (Windows) или subtitler_local.sh (macOS/Linux)
-3. Следовать мастеру установки (автоустановка PyTorch, WhisperX, моделей)
-4. В настройках плагина в поле API указать: Server URL = http://localhost:8765
-5. В AE выбрать нужный файл → запустить транскрибацию
+## 📁 Supported Formats
 
-Поддерживаемые форматы
-Вход: MP4, MOV, AVI, MKV, MP3, WAV, M4A, FLAC, OGG и другие (до 500 MB)
+**Input:** MP4, MOV, AVI, MKV, MP3, WAV, M4A, FLAC, OGG, and others (up to 500 MB).
+**Output:** SRT, VTT, TXT.
 
-Выход: SRT, VTT, TXT
-
-Форматы субтитров:
-
-Standard — стандартные фразы (2-7 сек)
-Short — короткие реплики (1-3 сек)
-Word — каждое слово отдельно
+### Subtitle Formats:
+* **Standard** — standard phrases (2-7 sec)
+* **Short** — short lines (1-3 sec)
+* **Word** — each word separately
